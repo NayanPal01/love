@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFE4E1; /* Light Pink */
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20240229/pngtree-cute-teddy-bear-couple-with-red-heart-on-white-background-image_15632739.jpg');
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* White with Transparency */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 3rem;
+    color: #FF1493; /* Deep Pink */
+}
+
+.love-sign {
+    font-size: 1.5rem;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FF69B4; /* Romantic Pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#noBtn {
+    transition: transform 0.5s ease;
+    position: absolute;
+}
+
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, -20px); }
+    50% { transform: translate(-20px, 20px); }
+    75% { transform: translate(-20px, -20px); }
+    100% { transform: translate(20px, 20px); }
+}
+@keyframes textAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes particleAnimation {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) scale(0); opacity: 0; }
+}
+
+.title {
+    font-size: 3rem;
+    color: #FF69B4; /* Romantic Pink */
+    transition: color 0.5s; /* Text color transition */
+}
+
+.title.loved {
+    color: #e12fe1; /* Gold */
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FF69B4; /* Romantic Pink */
+    border-radius: 50%;
+    animation: particleAnimation 1s ease-out forwards; /* Particle animation */
+}
+/* Original CSS styles */
+
+/* Add this media query for tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .title {
+        font-size: 2rem; /* Decrease font size for smaller screens */
+    }
+
+    .options {
+        margin-top: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 0.9rem; /* Decrease button font size for smaller screens */
+    }
+
+    #noBtn {
+        position: relative; /* Remove absolute positioning for 'No' button */
+        margin-top: 10px; /* Add margin to position 'No' button below 'Yes' button */
+        transform: none; /* Reset transform property */
+    }
+
+    .title.loved {
+        font-size: 2.5rem; /* Increase font size for 'loved' title on smaller screens */
+    }
+}
+
+/* Add this media query for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 8px; /* Further decrease padding for smaller screens */
+    }
+
+    .title {
+        font-size: 1.8rem; /* Decrease font size for smaller screens */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Adjust button padding for smaller screens */
+        font-size: 0.8rem; /* Further decrease button font size for smaller screens */
+    }
+
+    .title.loved {
+        font-size: 2rem; /* Decrease font size for 'loved' title on smaller screens */
+    }
+}
